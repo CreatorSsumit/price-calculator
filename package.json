@@ -1,0 +1,28 @@
+{
+  "name": "material_world_things_price_calculator",
+  "version": "1.0.0",
+  "description": "Price Calculator for all material world things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CreatorSsumit/price-calculator.git"
+  },
+  "keywords": [
+    "price",
+    "calculator",
+    "gold",
+    "price",
+    "gold",
+    "price",
+    "calculator"
+  ],
+  "author": "sumit kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CreatorSsumit/price-calculator/issues"
+  },
+  "homepage": "https://github.com/CreatorSsumit/price-calculator#readme"
+}

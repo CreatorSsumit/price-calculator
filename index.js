@@ -1,38 +1,42 @@
-const calculator = ({broughtAmount=0,weight=0,weighInType=null,totalPrice=0,totalPriceInType=null})=>{
 
-    let weightInGram = 0,temp={};
+const mrp = document.querySelector("#mrp");
+const mrp_in_type = document.querySelector("#mrp_in_type");
+const b_weight_in_type = document.querySelector("#b_weight_in_type")
+const b_weight = document.querySelector("#b_weight")
+const b_amount = document.querySelector("#b_amount")
 
-    if(weighInType === 'kg'){
-    weightInGram = 1
-    weight=weight
-}
-    if(weighInType === 'gm'){
-    weightInGram  = 1000
-    weight = weight/1000
-}
-    if(weighInType === 'mg'){
-    weightInGram = 1000000
-    weight = weight/1000000
-}
 
-if(totalPriceInType ==='kg'){
-    totalPrice = totalPrice
-}
-if(totalPriceInType === 'gm'){
-    totalPrice = totalPrice * 1000
-}
-if(totalPriceInType === 'mg'){
-    totalPrice = totalPrice * 1000000
-}
+b_weight.addEventListener('keydown',()=>{
+    b_amount.value = ""
+})
+b_amount.addEventListener('keydown',()=>{
+    b_weight.value = ""
+})
+b_weight_in_type.addEventListener("change",()=>{
+    b_weight.value = ""
+})
 
-    
-    if(!weight && broughtAmount)
-    temp =  (broughtAmount/totalPrice) * weightInGram // find weight
-    if(weight && !price)
-    temp =  (weight)*totalPrice // find price
 
-    return temp.toFixed(4)
+document.querySelector("#submit").addEventListener("click",()=>{
 
-} 
 
-module.exports = calculator
+    if(b_amount.value && !b_weight.value){
+        b_weight.value =  calculator({
+            broughtAmount:b_amount.value,
+            totalPrice:mrp.value,
+            totalPriceInType:mrp_in_type.value,
+            weighInType:b_weight_in_type.value
+        })  // weight
+    }else{
+        b_amount.value =  calculator({
+            weight:b_weight.value,
+            totalPrice:mrp.value,
+            totalPriceInType:mrp_in_type.value,
+            weighInType:b_weight_in_type.value
+        }) //price
+    }
+
+   
+})
+
+

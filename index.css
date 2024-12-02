@@ -34,7 +34,7 @@ html,body{
 }
 
 .inputfield{
-margin-top: 20px;
+margin-top: 30px;
 font-size: 13px;
 }
 
@@ -52,7 +52,7 @@ margin-top: 50px;
 }
 
 .inputfield.btn{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .section >.inputfield .flexbox >input{
